@@ -1,0 +1,670 @@
+[
+  {
+    "category": "SQL_INJECTION",
+    "code": "def add_payment_method(user_id, card_type):\n    query = f\"INSERT INTO payment_methods (user_id, type) VALUES ({user_id}, '{card_type}')\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_orders_by_status(status):\n    query = f\"SELECT * FROM orders WHERE status = '{status}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def search_inventory(sku):\n    query = f\"SELECT * FROM inventory WHERE sku LIKE '%{sku}%'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_shipping_address(order_id, address):\n    query = f\"UPDATE orders SET shipping_address = '{address}' WHERE id = {order_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_categories_by_parent(parent_id):\n    query = f\"SELECT * FROM categories WHERE parent_id = {parent_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def search_transactions(date_range):\n    query = f\"SELECT * FROM transactions WHERE date BETWEEN '{date_range}' AND '{date_range}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_user_preferences(user_id):\n    query = f\"SELECT * FROM preferences WHERE user_id = {user_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_product_tags(product_id, tags):\n    query = f\"UPDATE products SET tags = '{tags}' WHERE id = {product_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def find_suppliers(country):\n    query = f\"SELECT * FROM suppliers WHERE country = '{country}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_reviews_by_rating(rating):\n    query = f\"SELECT * FROM reviews WHERE rating = {rating}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_user_profile(user_id):\n    query = f\"SELECT * FROM users WHERE id = {user_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_user_email(user_id, email):\n    query = f\"UPDATE users SET email = '{email}' WHERE id = {user_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def delete_product(product_id):\n    query = f\"DELETE FROM products WHERE id = {product_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_product_details(product_name):\n    query = f\"SELECT * FROM products WHERE name = '{product_name}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_order_status(order_id, status):\n    query = f\"UPDATE orders SET status = '{status}' WHERE id = {order_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_comments_by_user(user_id):\n    query = f\"SELECT * FROM comments WHERE user_id = {user_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def search_users_by_role(role):\n    query = f\"SELECT * FROM users WHERE role = '{role}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_transactions_by_amount(amount):\n    query = f\"SELECT * FROM transactions WHERE amount = {amount}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_product_price(product_id, price):\n    query = f\"UPDATE products SET price = {price} WHERE id = {product_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_orders_by_date(date):\n    query = f\"SELECT * FROM orders WHERE date = '{date}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_user_by_username(username):\n    query = f\"SELECT * FROM users WHERE username = '{username}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_user_address(user_id, address):\n    query = f\"UPDATE users SET address = '{address}' WHERE id = {user_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def delete_comment(comment_id):\n    query = f\"DELETE FROM comments WHERE id = {comment_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_product_by_category(category_id):\n    query = f\"SELECT * FROM products WHERE category_id = {category_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_order_quantity(order_id, quantity):\n    query = f\"UPDATE orders SET quantity = {quantity} WHERE id = {order_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_reviews_by_product(product_id):\n    query = f\"SELECT * FROM reviews WHERE product_id = {product_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def search_orders_by_customer(customer_id):\n    query = f\"SELECT * FROM orders WHERE customer_id = {customer_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_payments_by_type(payment_type):\n    query = f\"SELECT * FROM payments WHERE type = '{payment_type}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_user_phone(user_id, phone):\n    query = f\"UPDATE users SET phone = '{phone}' WHERE id = {user_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def delete_order(order_id):\n    query = f\"DELETE FROM orders WHERE id = {order_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_product_by_brand(brand_id):\n    query = f\"SELECT * FROM products WHERE brand_id = {brand_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def update_order_address(order_id, address):\n    query = f\"UPDATE orders SET address = '{address}' WHERE id = {order_id}\"\n    cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_ratings_by_user(user_id):\n    query = f\"SELECT * FROM ratings WHERE user_id = {user_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def search_products_by_supplier(supplier_id):\n    query = f\"SELECT * FROM products WHERE supplier_id = {supplier_id}\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "SQL_INJECTION",
+    "code": "def get_shipments_by_status(status):\n    query = f\"SELECT * FROM shipments WHERE status = '{status}'\"\n    return cursor.execute(query)"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def sync_repository(repo_url):\n    os.system(f'git clone {repo_url}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def convert_image(input_file):\n    os.system(f'convert {input_file} output.png')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def run_database_backup(db_name):\n    os.system(f'mysqldump -u root {db_name} > backup.sql')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def extract_archive(filename):\n    os.system(f'unzip {filename}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def send_email(address, message):\n    os.system(f'echo \"{message}\" | mail -s \"Notification\" {address}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def process_log(log_file):\n    os.system(f'awk \\'{ print $1 }\\'  {log_file}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def create_user(username):\n    os.system(f'useradd {username}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def set_cronjob(schedule, command):\n    os.system(f'echo \"{schedule} {command}\" >> /etc/crontab')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def install_package(package_name):\n    os.system(f'apt-get install -y {package_name}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def cleanup_temp_files(days):\n    os.system(f'find /tmp -type f -mtime +{days} -delete')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def run_script(script_path):\n    os.system(f'bash {script_path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def execute_command(command):\n    os.system(f'{command}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def list_directory(path):\n    os.system(f'ls -l {path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def copy_file(source, destination):\n    os.system(f'cp {source} {destination}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def move_file(source, destination):\n    os.system(f'mv {source} {destination}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def remove_file(file_path):\n    os.system(f'rm {file_path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def create_directory(path):\n    os.system(f'mkdir {path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def change_ownership(path, owner):\n    os.system(f'chown {owner} {path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def archive_files(path, archive_name):\n    os.system(f'tar -czf {archive_name} {path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def download_file(url, filename):\n    os.system(f'wget {url} -O {filename}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def compress_file(input_file, output_file):\n    os.system(f'gzip {input_file} -c > {output_file}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def decompress_file(input_file, output_file):\n    os.system(f'gunzip {input_file} -c > {output_file}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def search_files(path, pattern):\n    os.system(f'find {path} -name \"{pattern}\"')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def get_file_permissions(file_path):\n    os.system(f'stat -c \"%a\" {file_path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def set_file_permissions(file_path, permissions):\n    os.system(f'chmod {permissions} {file_path}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def run_docker_container(image_name):\n    os.system(f'docker run {image_name}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def execute_sql_query(query):\n    os.system(f'mysql -e \"{query}\"')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def send_message(phone_number, message):\n    os.system(f'twilio send {phone_number} \"{message}\"')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def convert_video(input_file, output_file):\n    os.system(f'ffmpeg -i {input_file} {output_file}')"
+  },
+  {
+    "category": "COMMAND_INJECTION",
+    "code": "def resize_image(input_file, output_file, width, height):\n    os.system(f'convert {input_file} -resize {width}x{height} {output_file}')"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def save_report(report_id, content):\n    with open(f'reports/{report_id}.pdf', 'wb') as f:\n        f.write(content)"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_user_avatar(username):\n    with open(f'avatars/{username}.png', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def store_session(session_id, data):\n    with open(f'sessions/{session_id}.dat', 'wb') as f:\n        f.write(data)"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_invoice(invoice_id):\n    with open(f'invoices/{invoice_id}.pdf', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def save_attachment(email_id, attachment):\n    with open(f'attachments/{email_id}/{attachment.name}', 'wb') as f:\n        f.write(attachment.data)"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_theme(theme_name):\n    with open(f'themes/{theme_name}/style.css', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_mail_template(template_id):\n    with open(f'email_templates/{template_id}.html', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def save_customer_data(customer_id, data):\n    with open(f'customers/{customer_id}/profile.json', 'w') as f:\n        f.write(data)"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_download(file_id):\n    with open(f'downloads/{file_id}', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_language(lang_code):\n    with open(f'languages/{lang_code}.json', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_user_data(user_id):\n    with open(f'user_data/{user_id}.json', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_config(config_name):\n    with open(f'config/{config_name}.ini', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_template(template_name):\n    with open(f'templates/{template_name}.html', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_file(filename):\n    with open(f'data/{filename}', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_image(image_id):\n    with open(f'images/{image_id}.jpg', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_library(library_name):\n    with open(f'libraries/{library_name}.so', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_log_file(filename):\n    with open(f'logs/{filename}.log', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_data(data_id):\n    with open(f'data/{data_id}.dat', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_resource(resource_name):\n    with open(f'resources/{resource_name}', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_module(module_name):\n    with open(f'modules/{module_name}.py', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_backup_file(backup_id):\n    with open(f'backups/{backup_id}.zip', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def open_file(filename):\n    with open(f'files/{filename}', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_user_profile(username):\n    with open(f'users/{username}/profile.txt', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_settings(settings_name):\n    with open(f'settings/{settings_name}.json', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_certificate(cert_name):\n    with open(f'certs/{cert_name}.pem', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_translation(language_code):\n    with open(f'translations/{language_code}.json', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def load_plugin(plugin_id):\n    with open(f'plugins/{plugin_id}/main.py', 'r') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def get_database_file(db_name):\n    with open(f'databases/{db_name}.sqlite', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "PATH_TRAVERSAL",
+    "code": "def read_archive(archive_id):\n    with open(f'archives/{archive_id}.tar.gz', 'rb') as f:\n        return f.read()"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_notification(message):\n    return f'<div class=\"notification\">{message}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def create_profile_link(user_id, name):\n    return f'<a href=\"/profile/{user_id}\">{name}</a>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_product(name, description):\n    return f'<div class=\"product\"><h2>{name}</h2><p>{description}</p></div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_breadcrumb(path):\n    return f'<nav class=\"breadcrumb\">{path}</nav>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def create_iframe(src):\n    return f'<iframe src=\"{src}\"></iframe>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_avatar(user):\n    return f'<img class=\"avatar\" src=\"{user.avatar_url}\" alt=\"{user.name}\">"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_rating(score, review):\n    return f'<div class=\"rating\">{score} stars - {review}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def create_script_tag(code):\n    return f'<script>{code}</script>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_user_status(status):\n    return f'<span class=\"status\">{status}</span>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def create_meta_tags(metadata):\n    return f'<meta property=\"og:title\" content=\"{metadata.title}\">"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_message(message):\n    return f'<div class=\"message\">{message}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_username(username):\n    return f'<span class=\"username\">{username}</span>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_error(error_message):\n    return f'<div class=\"error\">{error_message}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def render_comment(comment):\n    return f'<p class=\"comment\">{comment}</p>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_link(url, text):\n    return f'<a href=\"{url}\">{text}</a>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_image(image_url, alt_text):\n    return f'<img src=\"{image_url}\" alt=\"{alt_text}\">'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_user_input(input_value):\n    return f'<input type=\"text\" value=\"{input_value}\">'"
+  },
+  {
+    "category": "XSS",
+    "code": "def render_html(html_code):\n    return f'{html_code}'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_alert(message):\n    return f'<script>alert(\"{message}\")</script>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_data(data):\n    return f'<div>{data}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_user_profile(username, bio):\n    return f'<div class=\"profile\"><h2>{username}</h2><p>{bio}</p></div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_product_details(name, price, description):\n    return f'<div class=\"product\"><h3>{name}</h3><p>Price: {price}</p><p>{description}</p></div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def render_navigation(links):\n    return f'<ul class=\"navigation\">{links}</ul>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_popup(message):\n    return f'<script>window.open(\"\", \"\", \"width=400,height=300\"); document.write(\"{message}\")</script>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_video(video_url):\n    return f'<video src=\"{video_url}\" controls></video>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_user_comment(username, comment):\n    return f'<div class=\"comment\"><strong>{username}:</strong> {comment}</div>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def generate_table(data):\n    return f'<table>{data}</table>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_form(form_html):\n    return f'{form_html}'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_confirmation(message):\n    return f'<script>if (confirm(\"{message}\")) {{} else {{} }}</script>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def display_user_list(users):\n    return f'<ul class=\"user-list\">{users}</ul>'"
+  },
+  {
+    "category": "XSS",
+    "code": "def show_product_list(products):\n    return f'<div class=\"product-list\">{products}</div>'"
+  },
+  {
+    "category": "SAFE",
+    "code": "def create_order(user_id, items):\n    query = \"INSERT INTO orders (user_id, items) VALUES (%s, %s)\"\n    cursor.execute(query, (user_id, json.dumps(items)))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_user_by_email(email):\n    query = \"SELECT * FROM users WHERE email = %s\"\n    return cursor.execute(query, (email,))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def save_file(filename, content):\n    safe_path = pathlib.Path('uploads').resolve() / pathlib.Path(filename).name\n    if safe_path.parent!= pathlib.Path('uploads').resolve():\n        raise ValueError('Invalid path')\n    safe_path.write_bytes(content)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def render_markdown(content):\n    return markdown.markdown(content, extensions=['fenced_code'])"
+  },
+  {
+    "category": "SAFE",
+    "code": "def execute_maintenance(command):\n    allowed_commands = {'backup', 'cleanup', 'optimize'}\n    if command not in allowed_commands:\n        raise ValueError('Invalid command')\n    subprocess.run(['maintenance.sh', command], check=True)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def update_settings(user_id, settings):\n    query = \"UPDATE user_settings SET preferences = %s WHERE user_id = %s\"\n    cursor.execute(query, (json.dumps(settings), user_id))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def create_thumbnail(image_path):\n    with Image.open(image_path) as img:\n        img.thumbnail((100, 100))\n        return img"
+  },
+  {
+    "category": "SAFE",
+    "code": "def validate_api_token(token):\n    return hmac.compare_digest(token, get_stored_token())"
+  },
+  {
+    "category": "SAFE",
+    "code": "def sanitize_filename(filename):\n    return ''.join(c for c in filename if c.isalnum() or c in '.-_')"
+  },
+  {
+    "category": "SAFE",
+    "code": "def process_user_input(data):\n    return {k: bleach.clean(v) for k, v in data.items()}"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_user_by_id(user_id):\n    query = \"SELECT * FROM users WHERE id = %s\"\n    return cursor.execute(query, (user_id,))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def update_user_profile(user_id, data):\n    query = \"UPDATE users SET name = %s, bio = %s WHERE id = %s\"\n    cursor.execute(query, (data['name'], data['bio'], user_id))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def generate_report(data):\n    return pdfkit.from_string(data, False)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def send_email(to, subject, body):\n    return smtplib.SMTP('localhost').sendmail('sender@example.com', to, f'Subject: {subject}\n\n{body}')"
+  },
+  {
+    "category": "SAFE",
+    "code": "def process_payment(amount, currency):\n    return payment_gateway.process(amount, currency)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def generate_qr_code(data):\n    return qrcode.make(data)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def encrypt_data(data, key):\n    return cryptography.encrypt(data, key)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def decrypt_data(encrypted_data, key):\n    return cryptography.decrypt(encrypted_data, key)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def hash_password(password):\n    return hashlib.sha256(password.encode()).hexdigest()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def generate_random_token():\n    return secrets.token_urlsafe(32)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def validate_email(email):\n    return re.match(r\"^[^@]+@[^@]+\\.[^@]+$\", email)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def sanitize_html(html_code):\n    return bleach.clean(html_code)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def escape_html(text):\n    return html.escape(text)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def validate_date(date_str):\n    return datetime.datetime.strptime(date_str, '%Y-%m-%d')"
+  },
+  {
+    "category": "SAFE",
+    "code": "def format_currency(amount, currency):\n    return locale.currency(amount, grouping=True, symbol=currency)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def resize_image(image, width, height):\n    return image.resize((width, height))"
+  },
+  {
+    "category": "SAFE",
+    "code": "def compress_image(image, quality):\n    return image.save('output.jpg', quality=quality)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def convert_image_format(image, format):\n    return image.save('output.png', format=format)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def generate_pdf(html_content):\n    return pdfkit.from_string(html_content, False)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def send_sms(phone_number, message):\n    return twilio_client.messages.create(to=phone_number, from_='+14155238886', body=message)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def log_message(message, level):\n    return logging.log(level, message)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_current_user():\n    return flask.g.user"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_database_connection():\n    return psycopg2.connect(database='mydatabase')"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_cache():\n    return redis.Redis(host='localhost', port=6379)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_config():\n    return configparser.ConfigParser()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_logger():\n    return logging.getLogger(__name__)"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_queue():\n    return queue.Queue()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_lock():\n    return threading.Lock()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_event():\n    return threading.Event()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_semaphore():\n    return threading.Semaphore()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_condition():\n    return threading.Condition()"
+  },
+  {
+    "category": "SAFE",
+    "code": "def get_barrier():\n    return threading.Barrier()"
+  }
+]

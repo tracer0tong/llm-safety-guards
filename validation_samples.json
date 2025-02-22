@@ -1,0 +1,26 @@
+[
+    {
+      "category": "SQL_INJECTION",
+      "code": "def delete_user(user_id):\n    query = f\"DELETE FROM users WHERE id = {user_id}\"\n    cursor.execute(query)"
+    },
+    {
+      "category": "COMMAND_INJECTION",
+      "code": "def find_files(pattern):\n    return os.system(f'find . -name {pattern}')"
+    },
+    {
+      "category": "PATH_TRAVERSAL",
+      "code": "def save_file(filename, content):\n    with open(f'uploads/{filename}', 'w') as f:\n        f.write(content)"
+    },
+    {
+      "category": "XSS",
+      "code": "def display_message(msg):\n    return f'<p class=\"message\">{msg}</p>'"
+    },
+    {
+      "category": "SAFE",
+      "code": "def delete_user(user_id):\n    query = \"DELETE FROM users WHERE id = %s\"\n    cursor.execute(query, (user_id,))"
+    },
+    {
+      "category": "SAFE",
+      "code": "def save_file(filename, content):\n    safe_name = secure_filename(filename)\n    path = os.path.join('uploads', safe_name)\n    with open(path, 'w') as f:\n        f.write(content)"
+    }
+]
