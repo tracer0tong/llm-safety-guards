@@ -4,6 +4,9 @@ import torch
 import torch.backends.cuda
 from torch.utils.data import Dataset
 from transformers import GPT2TokenizerFast, GPT2ForSequenceClassification, TrainingArguments, Trainer
+import os
+
+os.environ["WANDB_DISABLED"] = "true"
 
 VULN_CATEGORIES = {
     'SQL_INJECTION': 0,

@@ -1,6 +1,6 @@
 # Code Security Vulnerability Detection
 
-A demo of machine learning-based system for detecting security vulnerabilities in Python code snippets. This project uses a fine-tuned GPT-2 model to classify code into different vulnerability categories, helping developers identify potential security issues in their code.
+A machine learning-based system for detecting security vulnerabilities in Python code snippets. This project uses a fine-tuned GPT-2 model to classify code into different vulnerability categories, helping developers identify potential security issues in their code.
 
 ## Features
 
@@ -109,6 +109,66 @@ The system uses a fine-tuned version of DistilGPT-2 with the following specifica
 - Special tokens for code and vulnerability marking
 - Classification head for 5 vulnerability categories
 - Built on Hugging Face's Transformers library
+
+### Training Parameters
+
+- Learning rate: 5e-5
+- Batch size: 8
+- Training epochs: 3
+- Warmup steps: 100
+- Evaluation strategy: Per epoch
+- Model selection: Best model based on accuracy
+
+## Training output
+```text
+{'train_runtime': 11.8075, 'train_samples_per_second': 42.431, 'train_steps_per_second': 5.336, 'train_loss': 0.9835215977260044, 'epoch': 3.0}
+
+Validation Results:
+
+Code:
+def delete_user(user_id):
+    query = f"DELETE FROM users WHERE id = {user_id}"
+    cursor.execute(query)
+Predicted: SQL_INJECTION (confidence: 1.00)
+Actual: SQL_INJECTION
+
+Code:
+def find_files(pattern):
+    return os.system(f'find . -name {pattern}')
+Predicted: COMMAND_INJECTION (confidence: 0.93)
+Actual: COMMAND_INJECTION
+
+Code:
+def save_file(filename, content):
+    with open(f'uploads/{filename}', 'w') as f:
+        f.write(content)
+Predicted: PATH_TRAVERSAL (confidence: 0.95)
+Actual: PATH_TRAVERSAL
+
+Code:
+def display_message(msg):
+    return f'<p class="message">{msg}</p>'
+Predicted: XSS (confidence: 1.00)
+Actual: XSS
+
+Code:
+def delete_user(user_id):
+    query = "DELETE FROM users WHERE id = %s"
+    cursor.execute(query, (user_id,))
+Predicted: SAFE (confidence: 0.97)
+Actual: SAFE
+
+Code:
+def save_file(filename, content):
+    safe_name = secure_filename(filename)
+    path = os.path.join('uploads', safe_name)
+    with open(path, 'w') as f:
+        f.write(content)
+Predicted: SAFE (confidence: 0.63)
+Actual: SAFE
+
+Overall Accuracy: 100.00%
+```
 
 ## Limitations
 
